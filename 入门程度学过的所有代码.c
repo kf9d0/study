@@ -274,40 +274,21 @@ int main()
 
 
 
-/************************************ ShowChars.c ********************************************/
-
-
-#include <stdio.h>  // 包含头文件
-
-int main()
-{
+// ShowChars.c
     printf("What a nice day!\n");  // 输出字符串
-    return 0;  // 程序结束
-}
 
 
 
-/************************************* ShowChar.c *******************************************/
-
-
-#include <stdio.h>
-
-int main()
-{
+// ShowChar.c
     putchar('H'); // 输出字符常量H
     putchar('e'); // 输出字符常量e
     putchar('l'); // 输出字符常量l
     putchar('l'); // 输出字符常量l
     putchar('o'); // 输出字符常量o
     putchar('\n'); // 进行换行
-    return 0;
-}
 
 
-
-/*************************************** cubage.c ******************************************/
-
-
+// cubage.c
 #include <stdio.h> // 包含头文件
 #define Height 10 // 定义常量
 
@@ -341,9 +322,7 @@ int calculate(int Long, int Width)  // 定义计算体积的函数
 
 
 
-/*************************************** hello.c *******************************************/
-
-
+// hello.c
 #include <stdio.h>
 int main()
 {
