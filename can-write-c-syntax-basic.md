@@ -8,6 +8,7 @@ int main()
 }
 ```
 ```c
+// cubage.cc
 #include <stdio.h>
 #define Height 10
 int calculate(int Long, int Width);
@@ -32,5 +33,8 @@ int calculate(int Long, int Width)
  int result = Long*Width*Height;
  return result;
 }
+```
+```c
+// ShowChar.cc
 ```
  
