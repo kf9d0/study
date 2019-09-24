@@ -17,7 +17,7 @@ Put 2 **acorns** in the box.
  Drag an acorn into the box for each number.
 
 Put 9 pieces of **cheese** in the box.
- Coutnt 1,2,3,4,5,6,7,8,9
+ Count 1,2,3,4,5,6,7,8,9
  Drag a piece of cheese into the box for each number.
 
 Put 2 flowers in the box.
