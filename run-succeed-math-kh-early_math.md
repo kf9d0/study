@@ -42,6 +42,19 @@ Type the missing number in the box.
 You are already proficient at this skill
 You didn't get any mastery points because you were already proficient in this skill. Take the Unit Test to level up to Mastered.
 Also collected 135 energy points for **effort**
+##### Count in order
+Count the foxes/whales/squirrels. Type the missing numbers in the boxes
+Good work!
+You got it. **Onward**!
+How do we count the squirrels/acorens/bananas?
+ Count like this:
+Nice work!
+Keep going! Or see a step-by-step solution.
+Show **Summary**
+Your're still Mastered on this skill!
+Great work! You **maintained** your level on this skill.
+Mastered (100 pts) Got question correct in test
+##### Find 1 more or 1 less than a number
 #### Counting objects
 #### Comparing small numbers
 ### Addition and subtraction intro
