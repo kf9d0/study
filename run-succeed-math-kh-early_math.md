@@ -1,7 +1,7 @@
 ### Counting
 #### Counting
 ##### Counting with small numbers
-Put seven squirrelssissiididik
+Put seven 
 #### Numbers 0 to 120
 #### Counting objects
 #### Comparing small numbers
