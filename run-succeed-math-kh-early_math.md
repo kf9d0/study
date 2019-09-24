@@ -36,7 +36,7 @@ How do we count the monkeys/mice/flowers/whales?
 Choose 1 answer: A or B
  Count like this:
  
-Count the flowers/apples/**sharkd**/.
+Count the flowers/apples/**sharks**/.
 Type the missing number in the box.
 
 You are already proficient at this skill
