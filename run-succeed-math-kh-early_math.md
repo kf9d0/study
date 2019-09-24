@@ -23,9 +23,9 @@ Put 9 pieces of **cheese** in the box.
 Put 2 flowers in the box.
 Put 3 **whales** in the box.
 
-Stuck? Use a hint.
+**Stuck**? Use a hint.
 
-Skill leveld down
+Skill leveled down
 You leveled down to **Proficient** and lost 20 mastery points. Practice again to get this skill back up to Mastered.
 Mastered (100 pts) Take unit test
 Proficent (80 pts) Got 7 questions correct
