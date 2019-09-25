@@ -20,7 +20,7 @@ vim /etc/docker/daemon.json
 docker run hello-world
 docker run -it ubuntu bash
 
-
+docker images
 ```
 
 #### Linux
