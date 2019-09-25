@@ -1,3 +1,33 @@
+#### Spring Boot
+Eclipse Help -> Eclipse Marketplace -> Search Spring ide -> Select Spring Tools Suite 4 -> Install
+```
+https://start.spring.io
+
+依次选择 Maven Project
+Java (Language)
+2.18 (Spring Boot最新稳定版本)
+
+Maven 工程的项目坐标、项目描述信息
+Project Metadata
+ test.company (Group)
+ demo (Artifact[=artefact人工制品])
+Options
+ demo (Name)
+ Demo project for Spring Boot (Description)
+ test.company.demo (Package Name)
+ Jar (Packaging) [Spring Boot 内嵌了 Servlet容器，打成 Jar包后可以直接运行]
+ 8 (Java 构建的JDK版本)
+
+Dependencies
+ 输入关键字，如web，先加入 web依赖。Spring Web依赖
+
+点击 Generate 按钮
+
+将下载下来的项目解压，用 IntelliJ IDEA 或 Eclipse 打开
+
+56t
+```
+
 #### docker
 ```bash
 # offical yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
