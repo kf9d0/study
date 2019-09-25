@@ -73,4 +73,30 @@ public class App2_1 {
  }
 }
 ```
+```java
+// datatype.java
+public class datatype { // Class Name must be upper character? lower letter compile passed.
+ public static void main(String[] args) {
+  int c = 20320;
+  char s = (char)c;
+  double min = -Double.MAX_VALUE;
+  String zhuanyizifu = "\f \b \n \r \t \\ \' \" \uxxxx \ddd"; // wrong: \uxxxx \dddd; edit: \ufe8e \d73
+  String zhuanyi = "\\uxxx"+"\\ddd"
+  String string1 = "Hello! Miss Wu! \n";
+  final int MAX = 10;
+  final float PI = 3.14f;
+  
+  int i,j,k;
+  int i1 = 0; // error: variable i is already defined in method main(String[])
+  float x = 3.14f;
+  double y = 3.1415926; // wrong: float y = 3.1415926; error: incompatible types: possible lossy conversion from double to float
+  boolean truth = true;
+  char c1 = 'A';
+  
+  byte b = 55;
+  short s1 = 128;
+  boolean t = true;
+  int x1, y = 8;
+ }
+}
 ```
