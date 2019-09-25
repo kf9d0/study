@@ -4,6 +4,23 @@
 # mine 
 yum remove docker docker-common docker-selinux docker-engine
 yum install -y yum-utils device-mapper-persistent-data lvm2
+wget -o /etc/yum.repos.d/docker-ce.repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo # two files
+mv docker-ce.repo.1 docker-ce.repo
+mv: overwrite '**'? y
+yum makecache fast
+yum install docker-ce -y
+systemctl enable docker
+systemctl start docker
+
+vim /etc/docker/daemon.json
+{
+  "registry-mirrors": ["https://**.mirror.aliyuncs.com"] #aliyun zhuanshu jingxiang jiasuqi
+}
+
+docker run hello-world
+docker run -it ubuntu bash
+
+
 ```
 
 #### Linux
