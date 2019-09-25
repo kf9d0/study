@@ -6,6 +6,17 @@ yum remove docker docker-common docker-selinux docker-engine
 yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
+#### Linux
+Ubuntu Skills[https://wiki.ubuntu.org.cn/UbuntuSkills]
+```
+cat /etc/issue #not work in CentOS 7
+sudo lsb_release -a #not work
+cat /etc/lsb-releae #not work
+
+cat /proc/version #kernel version
+uname -a -s -n -r -v -m -p -i -o
+
+```
 
 #### Language
 ##### Python
