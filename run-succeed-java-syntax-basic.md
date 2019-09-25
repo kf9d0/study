@@ -29,3 +29,23 @@ public class App2 extends java.applet.Applet {
 // Open page1.html with a broswer
 // OR // appletviewer page1.html
 ```
+```java
+// App1_1.java
+//package ch01; // javac Error: Could not find or load main class App1_1
+import java.io.*;
+public class App1_1
+{
+ public static void main(String[] args) {
+  char c = ' '; // w: char c = ''; error: empty character literal; error: unclosed character literal
+  System.out.println("please input a character: ");
+  try {
+   c = (char)System.in.read();
+  }catch(IOException s) {
+   System.out.println("the character you input is: "+c);
+  }
+ }
+}
+```
+  
+  
+```
