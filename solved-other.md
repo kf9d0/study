@@ -1,2 +1,2 @@
 ##### Excel
-sr danyunage zidonghuanhang
+单元格多行文本 打开自动换行功能
