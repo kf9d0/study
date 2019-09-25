@@ -64,6 +64,9 @@ cat /proc/version #kernel version
 uname -a -s -n -r -v -m -p -i -o
 
 ```
+##### CentOS install graphical user interface
+yum -y groups install "GNOME Desktop"
+ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
 
 #### Language
 ##### Python
