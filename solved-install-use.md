@@ -64,6 +64,17 @@ cat /proc/version #kernel version
 uname -a -s -n -r -v -m -p -i -o
 
 ```
+#### CentOS install
+cd /etc/sysconfig/network-scripts
+ls
+vi ifcfg-enp***
+ONBOOT=yes
+service network restart
+
+ip addr
+
+ssh -p 22 user@IPaddress
+
 ##### CentOS install graphical user interface
 yum -y groups install "GNOME Desktop"
 ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
