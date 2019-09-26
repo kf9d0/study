@@ -27,6 +27,10 @@ A: 修改 写入方式 为 RAW (之前一直用HDD+)
 
 #### Computer Vision 环境
 ```
+Docker 镜像
+docker pull spmallick/opencv-docker:opencv
+
+
 Ubuntu 18 Graphical
 # 安装依赖
 apt install -y build-essential cmake git pkg-config libgtk2.0-dev libopenexr-dev
@@ -162,6 +166,15 @@ Dependencies
 将下载下来的项目解压，用 IntelliJ IDEA 或 Eclipse 打开
 
 56t
+```
+#### Android Studio
+```
+tar -zxvf AS.tar.gz
+cd android-studio/bin
+./studio.sh
+
+Proxy 局域网地址:1080
+
 ```
 
 
