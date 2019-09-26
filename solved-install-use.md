@@ -1,3 +1,25 @@
+#### OpenCV
+```
+Ubuntu 18 Graphical
+
+
+Win10
+官网下载OpenCV exe最新exe自解压安装包，解压到 C:\opencv4.1.1
+github.com/opencv/opencv_contrib release 下载 opencv_contrib-4.1.1.zip，解压到 C:\opencv4.1.1\sources\contrib
+Cmake官网 cmake-gui msi安装文件 下载 安装 设置PATH for all users
+Visual Studio Community 最新版 下载安装
+
+cmake-gui 界面 填写
+ Source code: C:/opencv4.1.1/sources
+ build the linaries: C:/**/build
+点击 Configure
+
+q: The CXX/C compier identificatioin is unhnown
+w: vs 2019 的 C++ 模块没有被完全安装
+h: 开始菜单 选择 Visual Studio Installer 更新后 左边大选项选择通用Windows平台开发 右边小选项添加选择 C++(v142)通用Windows平台工具 ->点击 全部下载后再安装 点击修改
+a: C++ Linux环境 功能模块
+```
+```
 #### CentOS install
 ```bash
 # CentOS
