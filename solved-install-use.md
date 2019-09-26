@@ -123,6 +123,11 @@ apt install python-matplotlib
 # pip install matplotlib
 apt install libopencv-dev python-opencv
 ```
+
+#### 共享文件
+Windows设置文件夹共享，运行 ，添加新的本地账户file，
+mac Ubuntu, Connect to Server: smb://192.168.0.106/ 输入user和密码
+
 ##### Java
 ```bash
 javac
