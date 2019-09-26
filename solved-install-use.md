@@ -85,10 +85,13 @@ yum install docker-ce -y
 systemctl enable docker
 systemctl start docker
 
+# 阿里云Docker加速器
 vim /etc/docker/daemon.json
 {
   "registry-mirrors": ["https://**.mirror.aliyuncs.com"] #aliyun zhuanshu jingxiang jiasuqi
 }
+systemctl daemon-reload
+systemctl restart docker
 
 docker run hello-world
 docker run -it ubuntu bash
