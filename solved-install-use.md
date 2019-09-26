@@ -1,3 +1,25 @@
+#### CentOS install
+```bash
+# CentOS
+
+cd /etc/sysconfig/network-scripts
+ls
+vi ifcfg-enp***
+ONBOOT=yes
+service network restart
+
+ip addr
+
+ssh -p 22 user@IPaddress
+```
+
+```
+Ubuntu
+Q: Ubuntu18 U盘安装 出现 failed to load ldlinux.c32
+A: 修改 写入方式 为 RAW (之前一直用HDD+)
+```
+
+
 #### Spring Boot
 Eclipse Help -> Eclipse Marketplace -> Search Spring ide -> Select Spring Tools Suite 4 -> Install
 ```
@@ -64,16 +86,7 @@ cat /proc/version #kernel version
 uname -a -s -n -r -v -m -p -i -o
 
 ```
-#### CentOS install
-cd /etc/sysconfig/network-scripts
-ls
-vi ifcfg-enp***
-ONBOOT=yes
-service network restart
 
-ip addr
-
-ssh -p 22 user@IPaddress
 
 ##### CentOS install graphical user interface
 yum -y groups install "GNOME Desktop"
