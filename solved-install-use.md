@@ -103,7 +103,7 @@ docker run -it ubuntu bash
 docker images
 ```
 
-### Macbook Pro 环境
+### 17inch Macbook Pro 环境
 ```bash
 sudo su
 cd /etc
@@ -144,6 +144,24 @@ a: C++ Linux环境 功能模块
 
 
 ### IDE 使用
+
+#### IntelliJ IDEA
+New -> Spring Initializr 
+-> 
+Group:(com.project com.demo com.test) com.aliyun.toolkit
+Artifact: demo
+Name: AliyunECSDemo
+-> 
+Dependencies (Web->Spring Web)
+->
+Project name: SpringBootAliyunECSDemo
+Project location: ~/dev/**
+-> Finish
+
+
+Tip of the Day
+^Space (Twice) (^Ctrl) - Code Completion
+
 #### Eclipse EE + STS
 Spring Boot
 Eclipse Help -> Eclipse Marketplace -> Search Spring ide -> Select Spring Tools Suite 4 -> Install
@@ -180,7 +198,16 @@ tar -zxvf AS.tar.gz
 cd android-studio/bin
 ./studio.sh
 
+SDK代理
+Auto-detect 
+mirrors.opencas.cn:80
+mirrors.neusoft.edu.cn:80
+Gradle 代理
 Proxy 局域网地址:1080
+
+s: the colors in values has on declaration in base values folder
+h: restart AS
+
 
 ```
 
