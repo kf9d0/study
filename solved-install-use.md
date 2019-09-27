@@ -103,6 +103,13 @@ docker run -it ubuntu bash
 docker images
 ```
 
+### Macbook Pro 环境
+```bash
+sudo su
+cd /etc
+vi hosts
+127.0.0.1 www.domain.com #屏蔽网址
+```
 
 ### Win10 环境
 #### Win10 必选环境
