@@ -266,6 +266,20 @@ s: vi ~/.bash_profile
 export ANDROID_HOME=/Users/nengzhang/Library/Android/sdk
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
+
+q: sdk command
+s: adb install /Users/**/**.apk
+
+q: arm64-v8a  armeabi-v7a
+s: 一般使用eabi-v7a
+
+q:OpenCV was not initialized correctly. Application will be shut down.
+s: adb install from armeabi-v7a.apk to arm64-v8a.apk
+ maybe apk version should equal or higher the opencv-android-sdk-version.
+
+f: OpenCV Manager被从后台杀掉进程 从内存中删除后，打开App会出现 OpenCV Manager package was not found! Try to install it.
+
+
 ```
 
 
