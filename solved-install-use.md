@@ -243,7 +243,29 @@ Proxy 局域网地址:1080
 s: the colors in values has on declaration in base values folder
 h: restart AS
 
+q:Add Module Dependency: Nothing to show
+s:手动编辑两个build.gradle文件，特别注意 apply plugin: 'com.android.library'
 
+q:
+Cannot Resolve setOnClickLlistener
+Cannot Resolve OnClickListener
+s: View.setOnClickListener(new View.OnClickListener() {
+    public void onClick(View) {};
+    });
+
+q: Cannot Resolve this.getResources() this.findViewById
+s: ActivityName.this.**
+ getApplicationContext 不清楚的另一种方法
+ 
+q: Native method not found: org.opencv.core.Mat.n_Mat:()
+s: new BaseLoaderCallback() {}
+ OpenCVLoader.initAsync()
+
+q: bash: adb: command not found
+s: vi ~/.bash_profile
+export ANDROID_HOME=/Users/nengzhang/Library/Android/sdk
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
 ```
 
 
