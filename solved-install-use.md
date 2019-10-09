@@ -40,6 +40,16 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 apt update
 apt upgrade
 ```
+```
+安装 Python3.6
+安装pip
+或者安装虚拟环境anaco
+```
+```常用命令
+tar -zxvf ..tar.gz
+tar zxvf ***.rar
+```
+
 #### 命令
 ```
 sudo apt-get update  更新源
