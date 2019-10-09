@@ -23,7 +23,7 @@ make
 Q: Ubuntu18 U盘安装 出现 failed to load ldlinux.c32
 A: 修改 写入方式 为 RAW (之前一直用HDD+)
 
-mv /etc/apt/sources.list /etc/apt/sourses.list.backup
+mv /etc/apt/sources.list /etc/apt/sources.list.backup
 vi 
 
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
