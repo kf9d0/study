@@ -1,22 +1,4 @@
-#### Ubuntu 下的依赖
-常见：
-build-essential
-cmkae
-git
-
-不常见：
-pkg-config
-libgtk2.0-dev
-libopenexr-dev
-gfrotran
-
-
-make
-如何配置 make 参数
-
-将来 云服务自动控制All
-
-### Ubuntu 环境 只用图像界面
+## Ubuntu 环境 只用图像界面
 #### 系统配置
 ```
 # 常备U盘 真机编译运行 开发环境 图形化IDE 视觉图像开发
@@ -39,6 +21,87 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 
 apt update
 apt upgrade
+```
+proxy
+```
+vi /etc/profile
+export http_proxy=http://192.168.0.106:1080
+export https_proxy=https://192.168.0.106:1080
+source /etc/profile
+```
+PATH
+```
+PATH="$PATH:/root/bin"
+export PATH
+```
+SWAP Memory
+```
+free -m
+
+```
+#### virtual Python
+##### anaconda
+``` 
+wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda*****-Linux-x86_64.sh
+chmod 777 **.sh
+bash **.sh
+cd /root/miniconda3/bin
+chmod 777 activate 
+source ./activate
+source ./deactivate
+(base)$ conda list
+
+not know below add channel is userful; have tested it's necessary to install package
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+
+conda config --get channels
+vi ~/.condarc
+conda install 软件名=版本号
+conda search **
+conda list
+witch 软件名  find location
+conda update/remove **
+
+conda env list  OR  conda info --envs
+conda create -n tf2 python=3.7
+conda activate tf2
+conda deactivate
+
+conda create -n python3.7 --clone test1
+conda remove -n test1 --all
+```
+#### auto build
+##### bazel
+```
+sudo apt-get install pkg-config zip g++ zlib1g-dev unzip (python3)
+Download wget -C  OR windows file share
+  bazel-<version>-installer-linux-x86_64.s
+chmod +x bazel-<version>-installer-linux-x86_64.sh
+./bazel-<version>-installer-linux-x86_64.sh --user
+export PATH="$PATH:$HOME/bin"
+  bazel build java code
+sudo apt-get install openjdk-11-jdk
+```
+#### TensorFlow
+bazel  no io_bazel_rules_docker
+```
+vi WORKSPACE add 
+http_archive(
+    name = "io_bazel_rules_docker",
+    sha256 = "aed1c249d4ec8f703edddf35cbe9dfaca0b5f5ea6e4cd9e83e99f3b0d1136c3d",
+    strip_prefix = "rules_docker-0.7.0",
+    urls = ["https://github.com/bazelbuild/rules_docker/archive/v0.7.0.tar.gz"],
+)
+```
+RST_STREAM with error code 8
+```
+Server terminated abruptly (error code: 1, error message: 'Received RST_STREAM with error code 8', log file: '/root/.cache/bazel/_bazel_root/d8d1c7aab7657a54086a1d98a3142dc8/server/jvm.out')
+I guess it's because the memory, or swap too small (2G), or bazel not specify max memeory (eg = 2G), or tensorflow contains java code (bazel need openjdk-11-jdk)
+```
+
 ```
 ```
 安装 Python3.6
@@ -147,6 +210,24 @@ docker run -it ubuntu bash
 
 docker images
 ```
+
+#### Ubuntu 下的依赖
+常见：
+build-essential
+cmkae
+git
+
+不常见：
+pkg-config
+libgtk2.0-dev
+libopenexr-dev
+gfrotran
+
+
+make
+如何配置 make 参数
+
+将来 云服务自动控制All
 
 ### 17inch Macbook Pro 环境
 ```bash
