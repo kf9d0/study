@@ -29,10 +29,21 @@ export http_proxy=http://192.168.0.106:1080
 export https_proxy=https://192.168.0.106:1080
 source /etc/profile
 ```
+常用命令
+```
+tar -zxvf ..tar.gz
+tar zxvf ***.rar
+```
 PATH
 ```
+vi /etc/profile
 PATH="$PATH:/root/bin"
 export PATH
+source /etc/profile
+
+Or terminal
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/root/bin"
 ```
 SWAP Memory
 ```
@@ -78,7 +89,8 @@ conda remove -n test1 --all
 ```
 sudo apt-get install pkg-config zip g++ zlib1g-dev unzip (python3)
 Download wget -C  OR windows file share
-  bazel-<version>-installer-linux-x86_64.s
+  bazel-<version>-installer-linux-x86_64.sh
+   from https://github.com/bazelbuild/bazel/releases Assets
 chmod +x bazel-<version>-installer-linux-x86_64.sh
 ./bazel-<version>-installer-linux-x86_64.sh --user
 export PATH="$PATH:$HOME/bin"
@@ -102,36 +114,6 @@ Server terminated abruptly (error code: 1, error message: 'Received RST_STREAM w
 I guess it's because the memory, or swap too small (2G), or bazel not specify max memeory (eg = 2G), or tensorflow contains java code (bazel need openjdk-11-jdk)
 ```
 
-```
-```
-安装 Python3.6
-安装pip
-或者安装虚拟环境anaco
-```
-```常用命令
-tar -zxvf ..tar.gz
-tar zxvf ***.rar
-```
-
-#### 命令
-```
-sudo apt-get update  更新源
-sudo apt-get install package 安装包
-sudo apt-get remove package 删除包
-sudo apt-cache search package 搜索软件包
-sudo apt-cache show package  获取包的相关信息，如说明、大小、版本等
-sudo apt-get install package --reinstall  重新安装包
-sudo apt-get -f install  修复安装
-sudo apt-get remove package --purge 删除包，包括配置文件等
-sudo apt-get build-dep package 安装相关的编译环境
-sudo apt-get upgrade 更新已安装的包
-sudo apt-get dist-upgrade 升级系统
-sudo apt-cache depends package 了解使用该包依赖那些包
-sudo apt-cache rdepends package 查看该包被哪些包依赖
-sudo apt-get source package  下载该包的源代码
-sudo apt-get clean && sudo apt-get autoclean 清理无用的包
-sudo apt-get check 检查是否有损坏的依赖
-```
 
 #### Computer Vision 环境
 ```
@@ -244,32 +226,58 @@ Windows设置文件夹共享，运行 ，添加新的本地账户file，
 mac Ubuntu, Connect to Server: smb://192.168.0.106/ 输入user和密码
 ```
 
-#### Win10 可选环境 测试 试过之后想删就删
-
-##### OpenCV 环境
-```
-Win10
-官网下载OpenCV exe最新exe自解压安装包，解压到 C:\opencv4.1.1
-github.com/opencv/opencv_contrib release 下载 opencv_contrib-4.1.1.zip，解压到 C:\opencv4.1.1\sources\contrib
-Cmake官网 cmake-gui msi安装文件 下载 安装 设置PATH for all users
-Visual Studio Community 最新版 下载安装
-
-cmake-gui 界面 填写
- Source code: C:/opencv4.1.1/sources
- build the linaries: C:/**/build
-点击 Configure
-
-q: The CXX/C compier identificatioin is unhnown
-w: vs 2019 的 C++ 模块没有被完全安装
-h: 开始菜单 选择 Visual Studio Installer 更新后 左边大选项选择通用Windows平台开发 右边小选项添加选择 C++(v142)通用Windows平台工具 ->点击 全部下载后再安装 点击修改
-a: C++ Linux环境 功能模块
-```
 
 #### Win10 未来环境
 
 
 
-### IDE 使用
+
+#### Linux 用到的命令 和 附加配置 
+Ubuntu Skills[https://wiki.ubuntu.org.cn/UbuntuSkills]
+```
+cat /etc/issue #not work in CentOS 7
+sudo lsb_release -a #not work
+cat /etc/lsb-releae #not work
+
+cat /proc/version #kernel version
+uname -a -s -n -r -v -m -p -i -o
+
+```
+
+
+### 安装过 但无用 已卸载 已废弃
+##### CentOS install graphical user interface
+yum -y groups install "GNOME Desktop"
+ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
+
+
+
+
+
+##### Java
+```bash
+javac
+java -version
+su root
+yum search java
+yum -y install java-*.*.*-openjdk-devel.x86_64
+cd /usr/lib/jvm/...-*.*.*-.../lib
+ls
+# show tools.jar dt.jar
+
+cd .
+pwd
+# copy the output
+vim /etc/profile
+export JAVA_HOME=/usr/lib/jvm/**
+# paste; do NOT add / at the end of line.
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+source /etc/profile
+javac #testOver
+```
+
+### Not use IDE 使用
 
 #### IntelliJ IDEA
 New -> Spring Initializr 
@@ -375,47 +383,45 @@ f: OpenCV Manager被从后台杀掉进程 从内存中删除后，打开App会�
 
 
 
-#### Linux 用到的命令 和 附加配置 
-Ubuntu Skills[https://wiki.ubuntu.org.cn/UbuntuSkills]
+### Not use just collect from webpage
+#### 命令
 ```
-cat /etc/issue #not work in CentOS 7
-sudo lsb_release -a #not work
-cat /etc/lsb-releae #not work
-
-cat /proc/version #kernel version
-uname -a -s -n -r -v -m -p -i -o
-
+sudo apt-get update  更新源
+sudo apt-get install package 安装包
+sudo apt-get remove package 删除包
+sudo apt-cache search package 搜索软件包
+sudo apt-cache show package  获取包的相关信息，如说明、大小、版本等
+sudo apt-get install package --reinstall  重新安装包
+sudo apt-get -f install  修复安装
+sudo apt-get remove package --purge 删除包，包括配置文件等
+sudo apt-get build-dep package 安装相关的编译环境
+sudo apt-get upgrade 更新已安装的包
+sudo apt-get dist-upgrade 升级系统
+sudo apt-cache depends package 了解使用该包依赖那些包
+sudo apt-cache rdepends package 查看该包被哪些包依赖
+sudo apt-get source package  下载该包的源代码
+sudo apt-get clean && sudo apt-get autoclean 清理无用的包
+sudo apt-get check 检查是否有损坏的依赖
 ```
 
 
-### 安装过 但无用 已卸载 已废弃
-##### CentOS install graphical user interface
-yum -y groups install "GNOME Desktop"
-ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
+#### Not Use Win10 可选环境 测试 试过之后想删就删
 
+##### OpenCV 环境
+```
+Win10
+官网下载OpenCV exe最新exe自解压安装包，解压到 C:\opencv4.1.1
+github.com/opencv/opencv_contrib release 下载 opencv_contrib-4.1.1.zip，解压到 C:\opencv4.1.1\sources\contrib
+Cmake官网 cmake-gui msi安装文件 下载 安装 设置PATH for all users
+Visual Studio Community 最新版 下载安装
 
+cmake-gui 界面 填写
+ Source code: C:/opencv4.1.1/sources
+ build the linaries: C:/**/build
+点击 Configure
 
-
-
-##### Java
-```bash
-javac
-java -version
-su root
-yum search java
-yum -y install java-*.*.*-openjdk-devel.x86_64
-cd /usr/lib/jvm/...-*.*.*-.../lib
-ls
-# show tools.jar dt.jar
-
-cd .
-pwd
-# copy the output
-vim /etc/profile
-export JAVA_HOME=/usr/lib/jvm/**
-# paste; do NOT add / at the end of line.
-export PATH=$JAVA_HOME/bin:$PATH
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-source /etc/profile
-javac #testOver
+q: The CXX/C compier identificatioin is unhnown
+w: vs 2019 的 C++ 模块没有被完全安装
+h: 开始菜单 选择 Visual Studio Installer 更新后 左边大选项选择通用Windows平台开发 右边小选项添加选择 C++(v142)通用Windows平台工具 ->点击 全部下载后再安装 点击修改
+a: C++ Linux环境 功能模块
 ```
