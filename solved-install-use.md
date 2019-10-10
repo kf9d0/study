@@ -47,8 +47,14 @@ export PATH="$PATH:/root/bin"
 ```
 SWAP Memory
 ```
-free -m
 swapon -s
+swapoff /swapfile
+dd if=/dev/zero of=/swapfile bs=1M count=12288
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+
+free -m
 cfdisk /dev/sda
 
 ```
