@@ -106,6 +106,8 @@ export PATH="$PATH:$HOME/bin"
 sudo apt-get install openjdk-11-jdk
 ```
 #### TensorFlow
+bazel build --jobs 2 --local_resources=2048,1,1 --config=opt //tensorflow/tools/pip_package:build_pip_package
+
 bazel  no io_bazel_rules_docker
 ```
 vi WORKSPACE add 
