@@ -48,6 +48,8 @@ export PATH="$PATH:/root/bin"
 SWAP Memory
 ```
 free -m
+swapon -s
+cfdisk /dev/sda
 
 ```
 #### virtual Python
