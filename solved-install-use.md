@@ -106,7 +106,15 @@ export PATH="$PATH:$HOME/bin"
 sudo apt-get install openjdk-11-jdk
 ```
 #### TensorFlow
+in conda py3 virtual environment
 bazel build --jobs 2 --local_resources=2048,1,1 --config=opt //tensorflow/tools/pip_package:build_pip_package
+
+bazel build --jobs 2 --local_resources=2048,1,1 --config=opt //tensorflow/tools/pip_package:build_pip_package -march=core2
+./bazel-bin/tensorflow/tools/pip_package/build_pip_package /home/user/build/tensorflow_pkg
+pip install /home/user/build/tensorflow_pkg/tensorflow-2.0.0-cp37-cp37m-linux_x86_64.whl
+ 
+pip install grpcio
+pip install gast
 
 bazel  no io_bazel_rules_docker
 ```
