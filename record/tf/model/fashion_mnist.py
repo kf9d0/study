@@ -264,3 +264,27 @@ Text(0.5, 0, 'Coat')
 >>> model.compile(optimizer='adam',
 ...               loss='sparse_categorical_crossentropy',
 ...               metrics=['accuracy'])
+>>> model.fit(train_images, train_labels, epochs=10)
+2019-10-12 19:06:21.418579: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 376320000 exceeds 10% of system memory.
+Train on 60000 samples
+Epoch 1/10
+60000/60000 [==============================] - 15s 258us/sample - loss: 0.4989 - accuracy: 0.8262
+Epoch 2/10
+60000/60000 [==============================] - 18s 302us/sample - loss: 0.3772 - accuracy: 0.8641
+Epoch 3/10
+60000/60000 [==============================] - 18s 296us/sample - loss: 0.3376 - accuracy: 0.8764
+Epoch 4/10
+60000/60000 [==============================] - 17s 285us/sample - loss: 0.3152 - accuracy: 0.8831
+Epoch 5/10
+60000/60000 [==============================] - 17s 290us/sample - loss: 0.2952 - accuracy: 0.8905
+Epoch 6/10
+60000/60000 [==============================] - 18s 297us/sample - loss: 0.2814 - accuracy: 0.8964
+Epoch 7/10
+60000/60000 [==============================] - 16s 272us/sample - loss: 0.2711 - accuracy: 0.9004
+Epoch 8/10
+60000/60000 [==============================] - 15s 246us/sample - loss: 0.2588 - accuracy: 0.9030
+Epoch 9/10
+60000/60000 [==============================] - 15s 253us/sample - loss: 0.2491 - accuracy: 0.9069
+Epoch 10/10
+60000/60000 [==============================] - 16s 262us/sample - loss: 0.2391 - accuracy: 0.9106
+<tensorflow.python.keras.callbacks.History object at 0x7f3741d5c9e8>
