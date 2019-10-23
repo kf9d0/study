@@ -22,6 +22,15 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 apt update
 apt upgrade
 ```
+ssh
+```
+ssh username@ip_address
+
+Ubuntu
+sudo apt update
+sudo apt install openssh-server
+sudo systemctl status ssh
+```
 proxy
 ```
 vi /etc/profile
@@ -33,6 +42,11 @@ source /etc/profile
 ```
 tar -zxvf ..tar.gz
 tar zxvf ***.rar
+```
+deb
+```
+sudo dpkg -i *.deb
+sudo apt-get -f --fix-missing install
 ```
 PATH
 ```
