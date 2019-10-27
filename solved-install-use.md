@@ -38,6 +38,35 @@ export http_proxy=http://192.168.0.106:1080
 export https_proxy=https://192.168.0.106:1080
 source /etc/profile
 ```
+Docker CE
+```
+sudo apt-get remove docker docker-engine docker.io
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add 
+sudo add-apt-repository \
+   "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update
+sudo apt-get install docker-ce
+systemctl enable docker
+systemctl start docker
+
+# 阿里云Docker加速器
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://**.mirror.aliyuncs.com"] #aliyun zhuanshu jingxiang jiasuqi
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+docker run hello-world
+docker run -it ubuntu bash
+
+docker images
+```
 常用命令
 ```
 tar -zxvf ..tar.gz
