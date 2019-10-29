@@ -64,8 +64,24 @@ sudo systemctl restart docker
 
 docker run hello-world
 docker run -it ubuntu bash
+docker run -it centos /bin/bash
 
-docker images
+docker ps -a  # Look up containerID
+sudo docker cp host_path containerID:container_path
+sudo docker cp containerID:container_path host_path
+
+docker commit containerID(root@...) ubuntu-test
+
+docker images | grep ubuntu-test
+docker inspect ubuntu-test
+
+
+docker run -it ubuntu-test [bash]
+
+docker  tag  旧镜像名  新镜像名
+docker  tag  镜像id  仓库：标签
+docker rmi <Repository:tag>
+docker image rm ImageID
 ```
 常用命令
 ```
