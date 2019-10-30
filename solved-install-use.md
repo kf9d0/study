@@ -70,13 +70,20 @@ docker ps -a  # Look up containerID
 sudo docker cp host_path containerID:container_path
 sudo docker cp containerID:container_path host_path
 
-docker commit containerID(root@...) ubuntu-test
+docker commit containerID(root@...) ubuntu-test(ImageName)
 
 docker images | grep ubuntu-test
 docker inspect ubuntu-test
 
 
 docker run -it ubuntu-test [bash]
+
+docker container ls -a     #获得容器信息
+docker container ls -a  -p   #获得容器id
+docker container stop <container ID>
+docker container rm  <container ID>
+docker container stop $(docker container ls -a -q)
+docker container rm $(docker container ls -a -q)
 
 docker  tag  旧镜像名  新镜像名
 docker  tag  镜像id  仓库：标签
