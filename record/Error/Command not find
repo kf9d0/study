@@ -1,0 +1,2 @@
+# sudo : Command not find(docker container)
+apt-get install sudo
