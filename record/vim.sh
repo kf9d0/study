@@ -1,6 +1,18 @@
 sudo apt-get install vim-gtk
 shdo -y install vim*
 
+# docker ubuntu
+vi ~/.vimrc
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set smarttab
+set ai
+set si
+set wrap
+set sw=2
+
 sudo vim /etc/vim/vimrc
 syntax on
 set nu                           // 在左侧行号
