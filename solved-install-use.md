@@ -43,6 +43,14 @@ source /etc/profile
 ```
 tar -zxvf ..tar.gz
 tar zxvf ***.rar
+
+yum install -y unzip zip
+zip
+unzip
+zip -r ***.zip folder
+zip -r ***.zip folder file.txt
+unzip ***.zip [ -d dstDir ]
+unzip -t ***.zip
 ```
 deb
 ```
