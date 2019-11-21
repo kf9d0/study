@@ -81,40 +81,7 @@ free -m
 cfdisk /dev/sda
 
 ```
-#### virtual Python
-##### anaconda
-``` 
-wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda*****-Linux-x86_64.sh
-chmod 777 **.sh
-bash **.sh
-cd /root/miniconda3/bin
-chmod 777 activate 
-source ./activate
-source ./deactivate
-(base)$ conda list
 
-not know below add channel is userful; have tested it's necessary to install package
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
-
-conda config --get channels
-vi ~/.condarc
-conda install 软件名=版本号
-conda search **
-conda list
-witch 软件名  find location
-conda update/remove **
-
-conda env list  OR  conda info --envs
-conda create -n tf2 python=3.7
-conda activate tf2
-conda deactivate
-
-conda create -n python3.7 --clone test1
-conda remove -n test1 --all
-```
 #### auto build
 ##### bazel
 ```
@@ -182,33 +149,6 @@ ip addr
 ssh -p 22 user@IPaddress
 ```
 
-#### docker环境
-```bash
-# offical yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
-# mine 
-yum remove docker docker-common docker-selinux docker-engine
-yum install -y yum-utils device-mapper-persistent-data lvm2
-wget -o /etc/yum.repos.d/docker-ce.repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo # two files
-mv docker-ce.repo.1 docker-ce.repo
-mv: overwrite '**'? y
-yum makecache fast
-yum install docker-ce -y
-systemctl enable docker
-systemctl start docker
-
-# 阿里云Docker加速器
-vim /etc/docker/daemon.json
-{
-  "registry-mirrors": ["https://**.mirror.aliyuncs.com"] #aliyun zhuanshu jingxiang jiasuqi
-}
-systemctl daemon-reload
-systemctl restart docker
-
-docker run hello-world
-docker run -it ubuntu bash
-
-docker images
-```
 
 #### Ubuntu 下的依赖
 常见：
