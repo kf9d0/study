@@ -1,4 +1,5 @@
-sudo apt-get install vim-gtk
+sudo apt-get install vim
+# Wrong sudo apt-get install vim-gtk
 shdo -y install vim*
 
 # docker ubuntu
